@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Nordic Blue - Primary Brand */
+    --background: 248 250 252; /* #F8FAFC */
+    --foreground: 15 23 42;
+    --card: 0 0% 100%;
+    --card-foreground: 15 23 42;
+    --popover: 0 0% 100%;
+    --popover-foreground: 15 23 42;
+    --primary: 221 83% 33%; /* #1E3A8A Nordic Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 77% 40%; /* #14B8A6 Fresh Teal */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 48 96% 53%; /* #FACC15 Warm Yellow */
+    --accent-foreground: 15 23 42;
+    --destructive: 0 84% 60%; /* #EF4444 Problem Red */
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 33%;
+    --radius: 0.75rem;
+    
+    /* Status Colors */
+    --online: 142 71% 45%; /* #22C55E */
+    --on-the-way: 174 77% 40%; /* #14B8A6 */
+    --pending: 48 96% 53%; /* #FACC15 */
+    
+    /* Chart Colors */
+    --chart-1: 221 83% 33%; /* Nordic Blue */
+    --chart-2: 174 77% 40%; /* Fresh Teal */
+    --chart-3: 48 96% 53%; /* Warm Yellow */
+    --chart-4: 142 71% 45%; /* Green */
+    --chart-5: 0 84% 60%; /* Red */
+  }
+
+  .dark {
+    --background: 222 47% 11%; /* #0F172A */
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 174 77% 40%; /* Teal for dark mode */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 221 83% 53%; /* Lighter blue for dark */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 48 96% 53%;
+    --accent-foreground: 15 23 42;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 174 77% 40%;
+    
+    /* Chart Colors for dark mode */
+    --chart-1: 174 77% 40%;
+    --chart-2: 221 83% 53%;
+    --chart-3: 48 96% 53%;
+    --chart-4: 142 71% 45%;
+    --chart-5: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Elderly-Friendly Mode */
+.elderly-mode {
+  font-size: 18px;
+}
+
+.elderly-mode h1 { 
+  font-size: 3rem !important; 
+  line-height: 1.2 !important;
+}
+
+.elderly-mode h2 { 
+  font-size: 2.25rem !important; 
+  line-height: 1.3 !important;
+}
+
+.elderly-mode h3 { 
+  font-size: 1.875rem !important; 
+  line-height: 1.3 !important;
+}
+
+.elderly-mode p, 
+.elderly-mode span:not(.lucide), 
+.elderly-mode label,
+.elderly-mode div { 
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+}
+
+.elderly-mode button { 
+  min-height: 3.5rem !important; 
+  font-size: 1.25rem !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.elderly-mode input, 
+.elderly-mode textarea, 
+.elderly-mode select { 
+  font-size: 1.25rem !important; 
+  min-height: 3.5rem !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.elderly-mode .text-xs,
+.elderly-mode .text-sm {
+  font-size: 1rem !important;
+}
+
+/* Improve button touch targets for elderly mode */
+.elderly-mode a,
+.elderly-mode button {
+  min-height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
